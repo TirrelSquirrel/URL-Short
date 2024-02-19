@@ -1,6 +1,6 @@
 const expressAsyncHandler = require('express-async-handler')
 
-function shortURL(input) {    
+function test(input) {    
     let res = {
         'input': input,
         'output': 'your output here'
@@ -12,4 +12,4 @@ function getUrl(input) {
 
 }
 
-module.exports = {shortURL, getUrl};
+module.exports = {test, getUrl};

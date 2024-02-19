@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-const shortURL = require("./controller");
+const controller = require("./controller");
 const { default: mongoose } = require("mongoose");
 
 const PORT = 5000;
@@ -26,8 +26,14 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.json(shortURL("hye"));
+  res.json(controller.test("hye"));
 });
+
+app.post('/', (req, res) => {
+  
+
+  res.send('hey')
+})
 
 app.listen(PORT, () => {
   console.log("Servidor iniciado");

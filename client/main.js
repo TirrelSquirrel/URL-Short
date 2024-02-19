@@ -6,7 +6,7 @@ const copyButton = document.getElementById("copy");
 
 const api = "http://localhost:5000/";
 
-function callApi() {
+function callApiTest() {
   const xhttpr = new XMLHttpRequest();
   xhttpr.open("GET", api, true);
 
@@ -33,10 +33,10 @@ shortButton.addEventListener("click", (e) => {
   let url = input.value;
   let validUrl = validateUrl(url);
   console.log(validUrl);
-  callApi();
+  callApiTest();
 });
 
 
 copyButton.addEventListener('click', () => {
-    copyToClipboard()
+    
 })
