@@ -28,6 +28,14 @@ function validateUrl(value) {
   );
 }
 
+function parseURLParams() {
+  const searchParams = new URLSearchParams(window.location.search);
+  const paramString = searchParams.toString().split("=")[0];
+  if (paramString != undefined) {
+    console.log(paramString)
+  }
+}
+
 shortButton.addEventListener("click", (e) => {
     e.preventDefault()
   let url = input.value;
@@ -40,3 +48,5 @@ shortButton.addEventListener("click", (e) => {
 copyButton.addEventListener('click', () => {
     
 })
+
+document.addEventListener('load', parseURLParams())

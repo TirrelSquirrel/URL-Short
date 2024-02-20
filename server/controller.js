@@ -12,4 +12,8 @@ function getUrl(input) {
 
 }
 
+
+function newUrl(input) {
+    
+} 
 module.exports = {test, getUrl};
